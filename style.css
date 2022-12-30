@@ -98,3 +98,46 @@ input::placeholder{
 #ipAddressData{
     display: none;
 }
+
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1rem;
+    }
+    button{
+        border-radius: 5px;
+    padding: 5px 20px;
+    font-size: 10px;
+    }
+    p{
+        font-size: 10px;
+    }
+    .map {
+     
+        height: 200px;
+    }
+    input{
+        width: -webkit-fill-available;
+        padding: 5px;
+        height: 28px;
+        padding-left: 35px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    input::placeholder{
+        /* padding-top: 10px; */
+        text-align: start;
+        padding-left:5px ;
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+    .search i{
+        top: 2rem;
+        font-size: 16px !important;
+        margin-bottom: 9px;
+    }
+    
+  }

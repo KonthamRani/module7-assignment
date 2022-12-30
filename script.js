@@ -31,7 +31,7 @@ function showUserDetails(){
      .then(json=>{
          let result=json;
          let arr=result.loc?.split(',')
-         map.src=src=`//maps.google.com/maps?q=${result.loc}&z=15&output=embed`
+         map.src=`//maps.google.com/maps?q=${result.loc}&z=15&output=embed`
       console.log(arr);
       document.getElementById('lat').textContent=`Latitude: ${arr[0]}`
       document.getElementById('long').textContent=`Longitude: ${arr[1]}`
@@ -92,10 +92,10 @@ function applyFilter(filterValue){
         if(filterValue==""){
             listOfPinCode[i].style.display = "block";
         }
-        else if (postOfficeData[i].Name.includes(filterValue)  || postOfficeData[i]?.BranchType?.toUpperCase().includes(filterValue) ) {
+        else if (postOfficeData[i].Name.toLowerCase().includes(filterValue.toLowerCase())  || postOfficeData[i].BranchType.toLowerCase().includes(filterValue.toLowerCase()) ) {
         
             listOfPinCode[i].style.display = "block";
-            console.log("if")
+            console.log("if",postOfficeData[i].Name,(filterValue))
         } else {
             listOfPinCode[i].style.display = "none";
             console.log("else")
