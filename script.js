@@ -38,7 +38,7 @@ function showUserDetails(){
       document.getElementById('city').textContent=`City: ${result.city}`
       document.getElementById('region').textContent=`Region: ${result.region}`
       document.getElementById('organisation').textContent=`Organisation: ${result.org}`
-      document.getElementById('hostName').textContent=`HostName: ${result.hostname}`
+      document.getElementById('hostName').textContent=`HostName: ${window.location.hostame}`
       document.getElementById('time-zone').textContent=`${result.timezone}`
       let timeZone=new Date().toLocaleString("en-US", { timeZone: `${result.timezone}` });
       document.getElementById('dateAndTime').textContent=timeZone;
