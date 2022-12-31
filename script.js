@@ -45,6 +45,10 @@ function showUserDetails(){
       console.log(result)
       showPinCodeList(result);
     })
+    .catch(error=>{
+        console.log(error)
+        alert("Something went wrong. Please try after Sometime")
+    })
 }
 let postOfficeData;
 function showPinCodeList(data){
@@ -71,6 +75,10 @@ function showPinCodeList(data){
         })
     
      
+    })
+    .catch(error=>{
+        console.log(error)
+        alert("Something went wrong. Please try after Sometime")
     })
     
    
